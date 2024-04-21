@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --main-color: rgb(209, 209, 231);
+}
+body{
+  background-image: url(../images/mario-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;  
+}
+.mar img{
+  height: 80px;
+  width: auto;
+  position: absolute;
+  bottom: 30px;
+  animation: mario 1.5s linear infinite;
+  -webkit-animation: mario 1.5s linear infinite;
+}
+@keyframes mario {
+  0%{
+    translate: -30px;
+  }
+  100%{
+    translate: calc(100vw - 50px);
+}
+}

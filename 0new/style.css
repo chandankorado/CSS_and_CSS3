@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body{
+  background-color: rgb(249, 227, 253);
+}
+
+/* CSS Nesting */
+
+.nesting{
+  margin: 60px;
+  h1{
+    color: blueviolet;
+
+    &::after{
+      content: " Video";
+      font-size: small;
+      font-weight: 700;
+      font-variant: small-caps;
+      letter-spacing: 1px;
+    }
+  }
+  p{
+    font-size: x-large;
+
+    &:hover{
+      color: rgb(202, 28, 106);
+      font-weight: 700;
+    }
+  }
+
+}
+
+/* Inline Block */
+
+.inlineblock h1{
+  margin-left: 60px;
+  padding: 5px;
+  display: inline;
+  border-radius: 15px;
+  border-inline: 5px solid red;
+  border-block:  4px solid yellow;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Writing Mode */
+
+.writingmode h1{
+  top: 50px;
+  left: 10px;
+  border-block: 3px solid rgb(127, 47, 47);
+  &::before{
+    content: "";
+       
+  }
+
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  position: absolute;
+}
+
+/* Seudo classes */
+
+/* :is(.seudo ul li){
+  font-size: large;
+  color: rebeccapurple;
+} */
+/* 
+:is(.seudo,.seudo1) :is(ul,ol) p{
+  font-size: large;
+  color: rebeccapurple;
+} */
+:is(.seudo,.seudo1) ol :is(li,p){
+  font-size: large;
+  color: rebeccapurple;
+}
+
+:where(.wher) .where ul :is(li,p){
+  font-size: x-large;
+}
+
+:where(.wher) .where ul :where(li,p){
+  font-size: xx-large;
+}
+
+/* user of :not in Nav Bar */
+
+.nav :not(.item:first-child){
+  padding-left: 20px;
+}
+/* .nav .item:first-child{
+  padding-left: 20px;
+} */
+
+
+.nav{
+  margin: 20px;
+  display: flex;
+  justify-content: end;
+}
+.nav .item {
+  
+  border: 1px solid black;
+}
+
+/* Input type properties attribute */
+
+.inputtype:has([type="checkbox"]:checked){
+  color: blue;
+  font-weight: 800;
+}
+
+
+.inputtype{
+  margin: 10px;
+}
+:is(.inputtype label){
+  font-size: large;
+}
+input[type="checkbox"]{
+  accent-color: rgb(190, 37, 149);
+  width: 20px;
+  aspect-ratio: 1;
+
+}

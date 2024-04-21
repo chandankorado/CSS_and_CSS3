@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(206, 247, 247);
+}
+.animation{
+  margin: 10px;
+}
+.box {
+ width: 40px;
+ display: inline-block;
+ aspect-ratio: 1;
+ border-radius: 50%;
+ box-shadow: 0 0 5px 5px rgb(27, 46, 109);
+ background-image: linear-gradient(red, yellow);
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+
+
+ animation-name: hook;
+ animation-duration: 5s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+ 
+ /* animation-delay: 1s;
+ animation-direction:alternate; */
+
+ 
+ /* animation:hook 5s linear 0s infinite normal;
+ -webkit-animation: hook 5s linear 0s infinite normal none;
+ -webkit-animation: hook 5s linear 0s infinite normal none ; */
+ 
+}
+
+@keyframes hook {
+  0% {
+    background-color: #fcbf49;
+    transform: translate(0%);
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+}
+
+  25% {
+    background-color: #fcbf49;
+    transform: translate(calc(90vw - 10%));
+    -webkit-transform: translate(calc(90vw - 10%));
+    -moz-transform: translate(calc(90vw - 10%));
+    -ms-transform: translate(calc(90vw - 10%));
+    -o-transform: translate(calc(90vw - 10%));
+}
+
+  50% {
+    background-color: #fcbf49;
+    transform: translate(calc(90vw - 10%),500px);
+    -webkit-transform: translate(calc(90vw - 10%),500px);
+    -moz-transform: translate(calc(90vw - 10%),500px);
+    -ms-transform: translate(calc(90vw - 10%),500px);
+    -o-transform: translate(calc(90vw - 10%),500px);
+}
+
+  75% {
+    background-color: #fcbf49;
+    transform: translate(20%,500px);
+    -webkit-transform: translate(20%,500px);
+    -moz-transform: translate(20%,500px);
+    -ms-transform: translate(20%,500px);
+    -o-transform: translate(20%,500px);
+}
+
+  100% {
+    background-color: #fcbf49;
+    transform: translate(20%,0%);
+    -webkit-transform: translate(20%,0%);
+    -moz-transform: translate(20%,0%);
+    -ms-transform: translate(20%,0%);
+    -o-transform: translate(20%,0%);
+}
+}
